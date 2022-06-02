@@ -24,6 +24,8 @@ class _QuestionDetailState extends State<QuestionDetail> {
   late Icon iconVotePlus;
   late int vote;
   late bool visible;
+
+  var ajouterUneReponseDegre1 = false;
   @override
   void initState() {
     for (ReponseDegre1 reponse in widget.question.getReponses) {
@@ -210,22 +212,60 @@ class _QuestionDetailState extends State<QuestionDetail> {
                       // Pour rependre
                       TextButton(
                         onPressed: () {
-                          debugPrint("nothing");
+                          setState(() {
+                            ajouterUneReponseDegre1 = !ajouterUneReponseDegre1;
+                          });
                         },
                         child: const Icon(Icons.reply_rounded),
                       ),
                       //Pour sauvgarder une question
-                      const TextButton(
-                        onPressed: null,
-                        child: Icon(Icons.bookmark_add_rounded),
+                      TextButton(
+                        onPressed: () {
+                          //TODO ajouter la fonctionalite
+                        },
+                        child: const Icon(Icons.bookmark_add_rounded),
                       ),
                     ],
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   height: 1,
                   color: Colors.lightBlue,
+                ),
+                /* ************************* Ajouter une reponse  degre 01 **************************/
+                Visibility(
+                  visible: ajouterUneReponseDegre1,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0, vertical: 8),
+                    child: TextField(
+                      onSubmitted: (value) {
+                        //TODO Ajouter une reponse de degre 01
+                      },
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide(
+                                  width: 2, color: Colors.lightBlue.shade100)),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            borderSide: BorderSide(
+                                width: 1, color: Colors.lightBlue[600]!),
+                          ),
+                          hintText: "Ajouter votre reponse ",
+                          suffixIcon: TextButton.icon(
+                              onPressed: () {
+                                //TODO passe le on submitted
+                              },
+                              icon: const Icon(
+                                Icons.send_rounded,
+                                color: Colors.lightBlue,
+                              ),
+                              label: const Text(""))),
+                    ),
+                  ),
                 ),
               ],
             ),

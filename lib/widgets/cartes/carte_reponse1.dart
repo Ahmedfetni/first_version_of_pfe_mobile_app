@@ -48,7 +48,7 @@ class _CarteReponseState extends State<CarteReponse> {
       },
       child: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-        margin: EdgeInsets.symmetric(horizontal: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 8),
         padding: const EdgeInsets.all(8.0),
         child: Card(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -56,27 +56,31 @@ class _CarteReponseState extends State<CarteReponse> {
           child: Column(
             children: [
               ListTile(
-                leading: Column(
+                leading: Wrap(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8, bottom: 8),
-                      child: Text(
-                          style: TextStyle(
-                            color: widget.reponse.getVote > 0
-                                ? Colors.greenAccent
-                                : (widget.reponse.getVote < 0
-                                    ? Colors.redAccent
-                                    : Colors.lightBlue),
-                          ),
-                          "${widget.reponse.getVote > 0 ? "+" : ""} ${widget.reponse.getVote}"),
-                    ),
-                    Icon(
-                      Icons.thumbs_up_down,
-                      color: widget.reponse.getVote > 0
-                          ? Colors.greenAccent
-                          : (widget.reponse.getVote < 0
-                              ? Colors.redAccent
-                              : Colors.lightBlue),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8, bottom: 8),
+                          child: Text(
+                              style: TextStyle(
+                                color: widget.reponse.getVote > 0
+                                    ? Colors.greenAccent
+                                    : (widget.reponse.getVote < 0
+                                        ? Colors.redAccent
+                                        : Colors.lightBlue),
+                              ),
+                              "${widget.reponse.getVote > 0 ? "+" : ""} ${widget.reponse.getVote}"),
+                        ),
+                        Icon(
+                          Icons.thumbs_up_down,
+                          color: widget.reponse.getVote > 0
+                              ? Colors.greenAccent
+                              : (widget.reponse.getVote < 0
+                                  ? Colors.redAccent
+                                  : Colors.lightBlue),
+                        ),
+                      ],
                     ),
                   ],
                 ),

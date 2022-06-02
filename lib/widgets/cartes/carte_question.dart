@@ -134,7 +134,9 @@ class _CarteQuestionState extends State<CarteQuestion> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TextButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          //TODO ajouter un vote de plus
+                        },
                         icon: const Icon(
                           Icons.thumb_up_alt_rounded,
                           color: Colors.greenAccent,
@@ -142,7 +144,9 @@ class _CarteQuestionState extends State<CarteQuestion> {
                         ),
                         label: const Text("")),
                     TextButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          //TODO Ajouter une -1 votes
+                        },
                         icon: const Icon(
                           Icons.thumb_down_alt_rounded,
                           color: Colors.redAccent,

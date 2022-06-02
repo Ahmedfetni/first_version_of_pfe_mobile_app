@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool utilisateurConnecter = false;
+  bool utilisateurConnecter = true;
   int indexDesEcrant = 0;
   bool ajouterTagEstAutoFocus = false;
   @override

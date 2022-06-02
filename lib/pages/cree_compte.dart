@@ -160,9 +160,13 @@ class _CrierCompteState extends State<CrierCompte> {
     final formatDeLaDate = DateFormat("dd-MM-yyyy");
     return Scaffold(
       appBar: AppBar(
+          title: Text(
+            "Inscrire",
+            style: TextStyle(color: Colors.white),
+          ),
           leading: TextButton.icon(
               onPressed: () {
-                //TODO  adding a navigator pop
+                Navigator.pop(context);
               },
               icon: const Icon(
                 Icons.arrow_back_rounded,
@@ -381,9 +385,11 @@ class _CrierCompteState extends State<CrierCompte> {
   /* Pour cree les elements de sous menu */
   DropdownMenuItem<String> _elementSousMenuDesNiveau(String element) =>
       DropdownMenuItem(
+          enabled: true,
           value: element,
           child: Text(
             element,
+            style: const TextStyle(color: Colors.lightBlue),
           ));
 
   _espaceVide() => SizedBox(

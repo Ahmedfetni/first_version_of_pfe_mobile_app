@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../pages/cree_compte.dart';
+import '../pages/connexion.dart';
 
 class ConnecterOuInscrire extends StatelessWidget {
   const ConnecterOuInscrire({Key? key}) : super(key: key);
@@ -13,14 +15,20 @@ class ConnecterOuInscrire extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => Connexion())));
+              },
               child: const Text(
                 "Connexion",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => CrierCompte())));
+              },
               child: const Text(
                 "Inscrire",
                 style: TextStyle(fontWeight: FontWeight.bold),

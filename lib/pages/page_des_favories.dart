@@ -17,8 +17,11 @@ class _PageDesFavoriesState extends State<PageDesFavories> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: widget.utilisateurConnecter
-            ? ListDesCartesQuestions()
-            : ConnecterOuInscrire());
+      child: widget.utilisateurConnecter
+          ? ListDesCartesQuestions()
+          : Center(
+              child: ConnecterOuInscrire(),
+            ),
+    );
   }
 }

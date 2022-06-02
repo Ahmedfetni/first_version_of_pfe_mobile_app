@@ -85,9 +85,13 @@ class _ConnexionState extends State<Connexion> {
 
     return Scaffold(
       appBar: AppBar(
+          title: Text(
+            "Connexion",
+            style: TextStyle(color: Colors.white),
+          ),
           leading: TextButton.icon(
               onPressed: () {
-                //TODO  adding a navigator pop
+                Navigator.pop(context);
               },
               icon: const Icon(
                 Icons.arrow_back_rounded,

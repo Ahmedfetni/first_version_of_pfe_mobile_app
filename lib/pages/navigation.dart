@@ -15,11 +15,12 @@ class _NavigationState extends State<Navigation> {
     return Drawer(
       elevation: 8,
       backgroundColor: Colors.white,
-      child: Container(
-        padding: EdgeInsets.all(16),
-        child: Material(
-          child: widget.utilisateurConnecter
-              ? ListView(
+      child: !widget.utilisateurConnecter
+          ? const Center(child: ConnecterOuInscrire())
+          : Container(
+              padding: EdgeInsets.all(16),
+              child: Material(
+                child: ListView(
                   children: [
                     Container(
                       margin: const EdgeInsets.only(right: 100, top: 20),
@@ -76,10 +77,9 @@ class _NavigationState extends State<Navigation> {
                       onTap: () {},
                     ),
                   ],
-                )
-              : ConnecterOuInscrire(),
-        ),
-      ),
+                ),
+              ),
+            ),
     );
   }
 }

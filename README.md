@@ -1,16 +1,6 @@
-# flutter_learning_about_themes_and_texts
+# Version intial de mon projet de fin etude licence informatique acad USTHB 2021/2022
 
-A new Flutter project.
+interface graphic d'une application mobile avec l'aide de fausse base de donnees 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

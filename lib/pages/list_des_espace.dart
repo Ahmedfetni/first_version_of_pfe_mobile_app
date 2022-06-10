@@ -13,6 +13,7 @@ class ListDesEspaces extends StatelessWidget {
   Widget build(BuildContext context) {
     final elements = BdFausse.espacesConstants();
     return Scaffold(
+      appBar: AppBar(title: Text("Favories"),),
       body: SafeArea(
         child: ListView(
           children: [
@@ -29,6 +30,6 @@ class ListDesEspaces extends StatelessWidget {
   _listDesEspaceConstant(element) => [
         CarteEspaceConstant(espace: element[0], image: "math.jpg"),
         CarteEspaceConstant(espace: element[1], image: "bio.jpg"),
-        CarteEspaceConstant(espace: element[1], image: "mec.jpg"),
+        CarteEspaceConstant(espace: element[2], image: "mec.jpg"),
       ];
 }

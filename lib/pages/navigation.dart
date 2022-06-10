@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_about_themes_and_texts/pages/page_profil.dart';
 import 'package:flutter_learning_about_themes_and_texts/widgets/connecter_ou_inscrire.dart';
 
 class Navigation extends StatefulWidget {
@@ -18,7 +19,7 @@ class _NavigationState extends State<Navigation> {
       child: !widget.utilisateurConnecter
           ? const Center(child: ConnecterOuInscrire())
           : Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Material(
                 child: ListView(
                   children: [
@@ -32,14 +33,24 @@ class _NavigationState extends State<Navigation> {
                               border: Border.all(
                                   width: 2, color: Colors.blueAccent),
                               shape: BoxShape.circle),
-                          child: CircleAvatar(
-                            minRadius: MediaQuery.of(context).size.width * 0.1,
-                            backgroundColor: Colors.yellowAccent,
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                "Mohammed",
-                                style: TextStyle(fontSize: 14),
+                          child: InkWell(
+                            onTap: () {
+                              // TDDO Navigate to the Profile page
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Profil()));
+                            },
+                            child: CircleAvatar(
+                              minRadius:
+                                  MediaQuery.of(context).size.width * 0.1,
+                              backgroundColor: Colors.yellowAccent,
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Mohammed",
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ),
@@ -52,7 +63,7 @@ class _NavigationState extends State<Navigation> {
                     Container(
                       height: 3,
                       color: Colors.blue,
-                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                     ),
                     const SizedBox(
                       height: 30,
@@ -62,7 +73,7 @@ class _NavigationState extends State<Navigation> {
                         Icons.settings_rounded,
                         color: Colors.black,
                       ),
-                      title: Text("Parametres"),
+                      title: const Text("Parametres"),
                       onTap: () {},
                     ),
                     const SizedBox(
@@ -73,7 +84,7 @@ class _NavigationState extends State<Navigation> {
                         Icons.logout_rounded,
                         color: Colors.black,
                       ),
-                      title: Text("Deconnexion"),
+                      title: const Text("Deconnexion"),
                       onTap: () {},
                     ),
                   ],

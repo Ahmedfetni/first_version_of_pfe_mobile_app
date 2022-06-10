@@ -75,6 +75,13 @@ class _AjouterUneQuestionState extends State<AjouterUneQuestion> {
                 },
               ),
               _lesPucesTagAjouters(pucesAjoutees),
+              /* Le boutton pour ajouter la question */
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 60, right: 20, top: 10, bottom: 10),
+                child:
+                    TextButton(onPressed: () {}, child: const Text("Publiber")),
+              ),
             ],
           ),
         ),

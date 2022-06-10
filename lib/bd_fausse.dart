@@ -2,7 +2,6 @@ import 'control/ReponseDegre2.dart';
 import 'control/ReponseDegre1.dart';
 import 'control/Tag.dart';
 import 'control/Question.dart';
-import 'control/Utilisateur.dart';
 import 'package:random_date/random_date.dart';
 import 'control/Espace.dart';
 
@@ -46,9 +45,10 @@ class BdFausse {
 
   static List<Question> genererQuestion() {
     List<Question> questions = [];
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 12; i = i + 4) {
       questions.add(
         Question(
+            vote: 20,
             nomUtilisateur: "Mohammed",
             titre: "Comment trier une pile par order croissant?",
             corp:
@@ -57,10 +57,50 @@ class BdFausse {
             listDesTags: _genererTags(),
             date: RandomDate.withStartYear(2022).random()),
       );
+      questions.add(Question(
+          vote: -3,
+          nomUtilisateur: "Ahmed",
+          titre: "Comment demonstrer qu'un graphe est complet ?",
+          corp: "",
+          reponses: _genererReponsesDegre1(),
+          listDesTags: _genererTags(),
+          date: RandomDate.withStartYear(2022).random()));
+      questions.add(Question(
+          nomUtilisateur: "Lisa",
+          titre:
+              "Est ce que y'a une personne qui a compris le chapitre 02 dans se2 ?",
+          corp:
+              "quelle est la diffrence entre les politiques du scheduling Round Robin et FIFO",
+          reponses: _genererReponsesDegre1(),
+          listDesTags: _genererTags(),
+          date: RandomDate.withStartYear(2022).random()));
+      questions.add(Question(
+          vote: 7,
+          nomUtilisateur: "Aymen",
+          titre: "pour quand le dernier delai pour le dossier de la bourse ?",
+          corp:
+              "je veux savoir si je peut attendre jusqu'a le semaine prochaine pour deposer le dossier de la bourse sachant que c'est ma premiere annees",
+          reponses: _genererReponsesDegre1(),
+          listDesTags: _genererTags(),
+          date: RandomDate.withStartYear(2022).random()));
+
+      questions[i].addTag("Algo");
       questions[i].addTag("MI");
       questions[i].addTag("L2");
       questions[i].addTag("S3");
       questions[i].addTag("Informatique");
+
+      questions[i + 1].addTag("THG");
+      questions[i + 1].addTag("Math");
+      questions[i + 1].addTag("RO");
+      questions[i + 1].addTag("Informatique");
+
+      questions[i + 2].addTag("ACAD");
+      questions[i + 2].addTag("L3");
+      questions[i + 2].addTag("SE");
+
+      questions[i + 3].addTag("La date pour la bourse");
+      questions[i + 3].addTag("bource ");
     }
     questions.add(Question(
         titre: "un titre tres long long  long long  long long long long ",

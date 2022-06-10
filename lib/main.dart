@@ -33,7 +33,8 @@ class _MyAppState extends State<MyApp> {
       PageNotification(utilisateurConnecter: utilisateurConnecter),
     ];
     return MaterialApp(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        title: 'Ask USTHB',
         theme: ThemeData(
           primarySwatch: Colors.lightBlue,
         ),

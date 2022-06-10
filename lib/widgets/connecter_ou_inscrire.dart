@@ -14,7 +14,9 @@ class ConnecterOuInscrire extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(
+            TextButton(
+              style: TextButton.styleFrom(
+                  elevation: 3, backgroundColor: Colors.white),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: ((context) => Connexion())));
@@ -24,7 +26,9 @@ class ConnecterOuInscrire extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
-            ElevatedButton(
+            TextButton(
+              style: TextButton.styleFrom(
+                  elevation: 3, backgroundColor: Colors.white),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: ((context) => CrierCompte())));

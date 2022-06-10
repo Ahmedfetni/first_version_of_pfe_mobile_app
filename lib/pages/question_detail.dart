@@ -321,7 +321,7 @@ class _QuestionDetailState extends State<QuestionDetail> {
         delegate: SliverChildBuilderDelegate(
           childCount: reponse.getReponses.length,
           (context, index) => Container(
-            margin: EdgeInsets.only(left: 30, right: 8),
+            margin: const EdgeInsets.only(left: 30, right: 8),
             padding: const EdgeInsets.all(8.0),
             child: CarteReponse2(reponse: reponse.getReponses[index]),
           ),

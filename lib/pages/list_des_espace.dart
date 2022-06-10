@@ -13,7 +13,6 @@ class ListDesEspaces extends StatelessWidget {
   Widget build(BuildContext context) {
     final elements = BdFausse.espacesConstants();
     return Scaffold(
-      appBar: AppBar(title: Text("Favories"),),
       body: SafeArea(
         child: ListView(
           children: [
